@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="340.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Chat">
+      <content>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="337.0">
+               <children>
+                  <TextArea fx:id="chatArea" editable="false" layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="286.0" prefWidth="312.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                  <TextField fx:id="sendMessageField" layoutX="14.0" layoutY="310.0" prefHeight="25.0" prefWidth="240.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="86.0" />
+                  <Button fx:id="buttonSend" layoutX="266.0" layoutY="310.0" mnemonicParsing="false" onAction="#onClickSend" prefHeight="25.0" prefWidth="60.0" text="Send" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="14.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Options">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="372.0" prefWidth="453.0">
+               <children>
+                  <TextField fx:id="ipField" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="230.0" text="localhost" />
+                  <TextField fx:id="portField" layoutX="261.0" layoutY="85.0" prefHeight="25.0" prefWidth="60.0" text="12345" />
+                  <TextField fx:id="nameField" layoutX="14.0" layoutY="161.0" prefHeight="25.0" prefWidth="307.0" text="Bot" />
+                  <!--<Label layoutX="210.0" layoutY="29.0" text="Server" />-->
+                  <Label layoutX="15.0" layoutY="68.0" text="IP" />
+                  <Label layoutX="261.0" layoutY="68.0" text="Port" />
+                  <Label layoutX="15.0" layoutY="144.0" text="User name" />
+                  <Button fx:id="buttonConnect" layoutX="140.0" layoutY="221.0" mnemonicParsing="false" onAction="#onClickConnect" text="Connect" />
+                  <CheckBox fx:id="checkBoxServerClient" layoutX="15.0" layoutY="29.0" mnemonicParsing="false" text="Server/Client" />
+                  <Circle fx:id="connectLED" fill="#c8c8c8" layoutX="224.0" layoutY="234.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
