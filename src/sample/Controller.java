@@ -7,13 +7,13 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+
 
 
 public class Controller {
@@ -73,6 +73,7 @@ public class Controller {
                 service = new Messages();
                 Registry registry = LocateRegistry.createRegistry(Integer.parseInt(port));
                 Naming.rebind(connectPath, service);
+
                 connectLED.setFill(Color.LIME);
                 startShowingMessage ();
                 return;
@@ -86,7 +87,7 @@ public class Controller {
 
         } else { //if Client
             try {
-                service = (IMessages) Naming.lookup(connectPath);
+                service = (IMessages) Naming.lookup(connectPath); //Ищем наш сервис в удаленном регистре
                 if (service.getHello().equals("hello")) {//server is alive ?
                     connectLED.setFill(Color.LIME);// Yes
                     startShowingMessage ();
