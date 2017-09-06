@@ -1,5 +1,5 @@
 # Chat
-Chat - Simple network chat application, base on Java RMI Technology and Multithreading.
+Chat - Simple network chat application, base on Java RMI Technology and Multithreading. GUI JavaFX.
 
 If you want to use chat on network computers, you need:
 1. Add the service.policy file to the application's start directory.
